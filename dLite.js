@@ -31,27 +31,15 @@ var dLite = function () {
 	};
 	return {
 		init : function () {
-			if (!window.elm) {
-				window.elm = this.elm;
-			}
-			if (!window.elmsByClass) {
-				window.elmsByClass = this.elmsByClass;
-			}
-			if (!window.addClass) {
-				window.addClass = this.addClass;
-			}
-			if (!window.removeClass) {
-				window.removeClass = this.removeClass;
-			}
-			if (!window.addEvent) {
-				window.addEvent = this.addEvent;
-			}
-			if (!window.removeEvent) {
-				window.removeEvent = this.removeEvent;
-			}
-			if (!window.DOMReady) {
-				window.DOMReady = this.DOMReady;
-			}
+			window.elm = window.elm || this.elm;
+			window.elmsByClass = window.elmsByClass || this.elmsByClass;
+			window.addClass = window.addClass || this.addClass;
+			window.removeClass = window.removeClass || this.removeClass;
+			window.addEvent = window.addEvent || this.addEvent;
+			window.removeEvent = window.removeEvent || this.removeEvent;
+			window.stopDefault = window.stopDefault || this.stopDefault;
+			window.cancelBubbling = window.cancelBubbling || this.cancelBubbling;
+			window.DOMReady = window.DOMReady || this.DOMReady;
 			
 			if (document.addEventListener) {
 				document.addEventListener("DOMContentLoaded", DOMHasLoaded, false);
@@ -253,6 +241,20 @@ var dLite = function () {
 				};
 			}
 			return this.removeEvent(elm, evt, func);
+		},
+		
+		stopDefault : function (evt) {
+			evt.returnValue = false;
+			if (evt.preventDefault) {
+				evt.preventDefault();
+			}
+		},
+		
+		cancelBubbling : function (evt) {
+			evt.cancelBubble = true;
+			if (evt.stopPropagation) {
+				evt.stopPropagation();
+			}
 		},
 		
 		DOMReady : function () {

@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>dLite testing</title>
 	
-	<script type="text/javascript" src="dLite.js"></script>
+	<script type="text/javascript" src="dLiteCompressed.js"></script>
 	<script type="text/javascript">
 		DOMReady(function () {
 			var apas = elmsByClass("apa", null, elm("gaka"));
@@ -16,6 +16,16 @@
 			for (var i=0; i < apas.length; i++) {
 				removeClass(apas[i], "focused");
 			};
+			
+			addEvent(elm("apa"), "click", function (evt) {
+				alert("Parent");
+			});
+			
+			addEvent(elm("robert"), "click", function (evt) {
+				alert("Hejsan");
+				stopDefault(evt);
+				cancelBubbling(evt);
+			});
 			//addEvent(document.body, "click", apa);
 		});
 		function apa () {
@@ -34,6 +44,10 @@
 </head>
 
 <body>
+	
+	<div id="apa">
+		<a id="robert" href="http://www.robertnyman.com/">Robert</a>
+	</div>
 	
 	<div id="gaka">
 		<div class="apa">
