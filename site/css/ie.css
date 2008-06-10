@@ -1,0 +1,13 @@
+#header{
+	height: 101px;
+	zoom: 1;	
+}
+#logo{
+	float: left;
+	width: 170px;
+	height: 101px;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.robertnyman.com/dlite/images/logo.png',sizingMethod='crop');
+}
+#logo img{
+	visibility: hidden;
+}
