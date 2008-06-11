@@ -56,7 +56,7 @@ a{
 
 a:hover{
 	color: #fff;
-	background: #5a8bcc;
+	background-color: #5a8bcc;
 }
 
 body{
@@ -129,12 +129,13 @@ ul{
 /* General */
 #container h1{
 	float: left;
-	margin: 0.2em 0 0;
+	margin: 0em 0 0;
 }
 
 #header{
-	background: url(../images/header-bg.jpg) repeat-x;
-	border-bottom: 1px solid #eee;
+	height: 118px;
+	background: url(../images/header-bg.png) repeat-x;
+	/*border-bottom: 1px solid #eee;*/
 	overflow: hidden;
 	padding: 0.5em 2em 0.2em;
 }
@@ -172,8 +173,9 @@ ul{
 #download{
 	float: right;
 	width: 210px;
-	background: #ebf4f9 url(../images/download-bg.png) no-repeat;
-	margin: 0 0 2em 5em;
+	height: 196px;
+	background: #abc4df url(../images/download-bg.png) no-repeat;
+	margin: 0 0 2em 1em;
 	padding: 20px;
 	font-size: 0.8em;
 	-moz-border-radius: 10px;
@@ -194,7 +196,7 @@ ul{
 
 #download a:hover{
 	color: #5a8bcc;
-	background: transparent;
+	background-color: transparent;
 }
 
 #download a .file-size{
@@ -207,7 +209,7 @@ ul{
 	font-weight: bold;
 }
 
-.documentation h3{
+.documentation-content h3{
 	padding-bottom: 0.5em;
 	border-bottom: 1px solid #000;
 }
@@ -217,6 +219,25 @@ ul{
 	border-top: 1px solid #000;
 	margin: 3em 0 2em;
 	padding: 0.5em 0.5em 0.5em 0;
+}
+
+/* Icon links */
+.download, .home, .documentation{
+	padding-left: 20px;
+}
+
+.download{
+	display: block;
+	height: 18px;
+	background: url(../images/icons/download.png) no-repeat 0 1px;
+}
+
+.home{
+	background: url(../images/icons/home.png) no-repeat;
+}
+
+.documentation{
+	background: url(../images/icons/documentation.png) no-repeat;
 }
 
 /* General classes */

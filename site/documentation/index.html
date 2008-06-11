@@ -21,26 +21,27 @@
 				</h1>
 				<div id="navigation">
 					<ul>
-						<li><a href="../index.html">Home</a></li>
-						<li class="last"><a href="index.html">Documentation</a></li>
+						<li><a href="../index.html" class="home">Home</a></li>
+						<li class="last"><a href="index.html" class="documentation">Documentation</a></li>
 					</ul>
 				</div>
 			</div>
 			
-			<div id="main-content" class="documentation">
+			<div id="main-content" class="documentation-content">
 				
 				<div id="download">
 					<h3>Download dLite</h3>
 					<p>
-						<a href="http://code.google.com/p/dlite/downloads/detail?name=dLite-1.0.js">dLite <span class="file-size">(7.9kb)</span></a>
+						<a href="http://code.google.com/p/dlite/downloads/detail?name=dLite-1.0.js" class="download">dLite <span class="file-size">(7.9kb)</span></a>
 					</p>
 					<p>
-						<a href="http://code.google.com/p/dlite/downloads/detail?name=dLiteCompressed-1.0.js">dLite, compressed <span class="file-size">(4.2kb)</span></a>
+						<a href="http://code.google.com/p/dlite/downloads/detail?name=dLiteCompressed-1.0.js" class="download">dLite, compressed <span class="file-size">(4.2kb)</span></a>
 					</p>
 				</div>
 				
 				<h2>dLite documentation</h2>
-				<p>There are 9 power functions in dLite, and their functionality and parameters are presented here.</p>
+				<p>There are 9 power functions in dLite, and their functionality and parameters are presented here. The idea is that each function has a semantic and self-explanatory name, so any developer looking at the code will understand what it will do.</p>
+				<p>The names are deliberately close to the native DOM methods, to make it easier to adapt to, but at the same time guaranteed to avoid name collision. Which parameters and what format they are expected to be in are described below.</p>
 				<h3>elm(<span class="parameter-name">id</span>)</h3>
 				<p>Finds an element with the sent-in <code>id</code>.</p>
 				
