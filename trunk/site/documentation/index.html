@@ -84,7 +84,7 @@
 				<p>Adds a CSS class to an element. Parameter <code>elm</code> is a DOM element reference, parameter <code>className</code> is a string.</p>
 				
 				<h4>Example</h4>
-				<pre class="code"><code>addClass(document.getElementById("container"), "active");</code></pre>
+				<pre class="code"><code>addClass(elm("container"), "active");</code></pre>
 				
 				<h4>Parameters</h4>
 				<ul>
@@ -97,7 +97,7 @@
 				<p>Removes a CSS class from an element. Parameter <code>elm</code> is a DOM element reference, parameter <code>className</code> is a string</p>
 				
 				<h4>Example</h4>
-				<pre class="code"><code>removeClass(document.getElementById("container"), "active");</code></pre>
+				<pre class="code"><code>removeClass(elm("container"), "active");</code></pre>
 				
 				<h4>Parameters</h4>
 				<ul>
@@ -110,7 +110,7 @@
 				<p>Adds an event to an element. Parameter <code>elm</code> is a DOM element reference, parameter <code>evt</code> is a string, parameter <code>func</code> is a function or a function reference.</p>
 				
 				<h4>Example</h4>
-				<pre class="code"><code>addEvent(document.getElementById("container"), "click", handleClick);</code></pre>
+				<pre class="code"><code>addEvent(elm("container"), "click", handleClick);</code></pre>
 				
 				<h4>Parameters</h4>
 				<ul>
@@ -125,7 +125,7 @@
 				<p>Removes an event from an element. Parameter <code>elm</code> is a DOM element reference, parameter <code>evt</code> is a string, parameter <code>func</code> is a function or a function reference.</p>
 				
 				<h4>Example</h4>
-				<pre class="code"><code>removeEvent(document.getElementById("container"), "click", handleClick);</code></pre>
+				<pre class="code"><code>removeEvent(elm("container"), "click", handleClick);</code></pre>
 				
 				<h4>Parameters</h4>
 				<ul>
