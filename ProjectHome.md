@@ -1,0 +1,1 @@
+dLite offers you the most common function which you always use: getting element references, find them by class, add event, and call a function/method as soon as the DOM has loaded.
